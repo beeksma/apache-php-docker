@@ -32,4 +32,6 @@ RUN pecl install apcu && \
         docker-php-ext-install mysqli && \
         docker-php-ext-install gettext && \
         docker-php-ext-install opcache && \
-        docker-php-ext-install zip
+        docker-php-ext-install zip && \
+        echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
+
